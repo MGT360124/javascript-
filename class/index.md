@@ -173,3 +173,20 @@ class Foo {
 
 Foo.prop // undefined
 ```
+
+## 继承父类
+
+```
+class Son extends Father {
+    constructor(){
+        super() //调用父类constructor,必须调用否则不能创建子类的实例
+        super.getFather() // 调用父类的方法。
+    }
+    getSonName(){
+        super.getName() // 调用父类的getName()方法
+    }
+    static getSonName() {
+        super.getName() // 调用父类的静态的getName()方法
+    }
+}
+```
