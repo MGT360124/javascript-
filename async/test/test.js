@@ -42,3 +42,8 @@ gen().then(data => {
 // await
 // await命令后面是一个 Promise 对象。如果不是，会被转成一个立即resolve的 Promise 对象。
 // await命令后面的 Promise 对象如果变为reject状态，则reject的参数会被catch方法的回调函数接收到
+
+// 注意点
+// 前面已经说过，await命令后面的Promise对象，运行结果可能是rejected，所以最好把await命令放在try...catch代码块中。
+// 多个await命令后面的异步操作，如果不存在继发关系，最好让它们同时触发。
+// await命令只能用在async函数之中，如果用在普通函数，就会报错。
