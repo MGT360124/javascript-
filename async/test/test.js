@@ -22,7 +22,7 @@ async function gen() {
     console.log(a);  // 1
     console.log('b');
     console.log(b); // 2
-    return a + b;
+    // return a + b;
 }
 gen().then(data => {
     console.log("data", data) //  gen()函数return的返回值
